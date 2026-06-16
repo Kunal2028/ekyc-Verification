@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Persona: AI-Based eKYC Verification System
 
 ## Overview
@@ -212,5 +211,4 @@ The system analyzes facial movements and liveness signals.
 
 This project is intended for educational, research, and demonstration purposes.
 =======
-# ekyc-Verification
->>>>>>> c792d0a2d85e65ba393de6497468936429ac9e5a
+
