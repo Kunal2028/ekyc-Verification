@@ -3,25 +3,23 @@ import json
 import numpy as np
 import pandas as pd
 
-# ----------------------------
-# Config (edit if you want)
-# ----------------------------
-CSV_PATH = "liveness_features.csv"     # your collected features CSV
-LABEL_COL = "label"                   # expects "REAL"/"SPOOF"
-SCORE_COL = "score"                   # final fused liveness score
 
-TARGET_FAR = 0.01                     # 1% spoof accepted as live
-REAL_UPPER_PCTL = 95                  # for "max allowed" gates on replay-ish features
-REAL_LOWER_PCTL = 20                  # for "min required" gates on quality features
+CSV_PATH = "liveness_features.csv"     
+LABEL_COL = "label"                  
+SCORE_COL = "score"                 
 
-# Column names (from your collector script)
+TARGET_FAR = 0.01                   
+REAL_UPPER_PCTL = 95                 
+REAL_LOWER_PCTL = 20                 
+
+# Column names (from collector script)
 SCREEN_COL = "info.screen_fft_score"
 DUP_COL = "info.dup_frame_rate"
 QRPPG_COL = "info.Q_rppg"
 SNR_COL = "info.snr_db"
 CORR_COL = "info.corr_lr"
 
-# Optional: you may have these too
+# Optional: 
 PMOTION_COL = "comp.P_motion"
 PSTATIC_COL = "comp.P_static"
 PRPPG_COL = "comp.P_rppg"
@@ -124,9 +122,7 @@ def main():
     # ----------------------------
     # Gray-zone lower bound
     # ----------------------------
-    # A simple heuristic:
-    # - Let gray_low be the 10th percentile of REAL scores (keeps most REAL),
-    #   but not higher than tau_live.
+
     gray_low = pct(real[SCORE_COL].values, 10)
     if gray_low is not None:
         thresholds["gray_low"] = float(min(gray_low, tau_live))
