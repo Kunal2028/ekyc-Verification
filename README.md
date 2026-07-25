@@ -193,7 +193,7 @@ The system analyzes facial movements and liveness signals.
 * Real-time verification
 * GPU acceleration support
 * Robust face matching using ArcFace
-* Anti-spoofing protection against replay attacks
+* Anti-spoofing protection against replay attack
 
 ---
 
