@@ -24,7 +24,7 @@ with st.sidebar:
         "Face Similarity Threshold",
         min_value=0.10,
         max_value=0.80,
-        value=0.35,
+        value=0.6,
         step=0.01,
     )
 
