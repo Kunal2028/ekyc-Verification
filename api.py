@@ -169,7 +169,7 @@ async def verify_ekyc(
     id_image: UploadFile = File(...),
     live_video: UploadFile = File(...),
     face_threshold: float = Query(
-        default=0.35,
+        default=0.6,
         ge=-1.0,
         le=1.0,
     ),
