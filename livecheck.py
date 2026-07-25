@@ -1,6 +1,4 @@
 # livecheck.py
-# Liveness check: Static (LBP+FFT) + Motion + rPPG (POS) + Blink+Mouth minimum gate (offline)
-# NOTE: Random 3s challenge is handled in app.py real-time.
 
 import cv2
 import numpy as np
