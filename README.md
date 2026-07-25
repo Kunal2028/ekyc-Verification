@@ -179,7 +179,7 @@ The system analyzes facial movements and liveness signals.
 
 ### Step 3: Face Matching
 
-* Face embeddings are generated from the verification video.
+* Face embeddings are generated from the verification video using Arcface.
 * Cosine similarity is computed against the ID embedding.
 * Verification passes only if:
 
