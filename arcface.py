@@ -196,7 +196,7 @@ def cosine_similarity(
 def verify_face_match(
     id_input,
     selfie_input,
-    threshold=0.35,
+    threshold=0.6,
     det_size=(640, 640),
     providers=None,
 ):
