@@ -9,9 +9,6 @@ from insightface.app import FaceAnalysis
 _face_app = None
 
 def get_face_app(det_size=(1280, 1280)):
-    """
-    Lazy init FaceAnalysis once (important for Streamlit performance).
-    """
     global _face_app
     if _face_app is None:
         _face_app = FaceAnalysis(name="buffalo_l", providers=["CPUExecutionProvider"])
@@ -31,13 +28,6 @@ def rotate_image(img_bgr, angle):
     return img_bgr
 
 def read_image_any(input_data):
-    """
-    Accepts:
-    - file path (str)
-    - bytes (uploaded file bytes)
-    - numpy array (BGR or RGB)
-    Returns: BGR image (np.ndarray)
-    """
     if isinstance(input_data, str):
         img = cv2.imread(input_data)
         if img is None:
