@@ -71,17 +71,7 @@ def crop_face_from_id_robust(
     upscale_factor=1.5,
     return_debug=False
 ):
-    """
-    Streamlit-ready robust face crop.
 
-    input_data: path OR bytes OR numpy image
-    margin: extra padding around detected face bbox
-    det_size: detector size for insightface
-    return_debug: if True returns (crop, debug_dict)
-
-    Returns:
-        crop_bgr (np.ndarray) OR (crop_bgr, debug)
-    """
     app = get_face_app(det_size=det_size)
 
     img0 = read_image_any(input_data)
