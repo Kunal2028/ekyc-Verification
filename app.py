@@ -23,8 +23,8 @@ with st.sidebar:
     threshold = st.slider(
         "Face Similarity Threshold",
         min_value=0.10,
-        max_value=0.80,
-        value=0.6,
+        max_value=0.90,
+        value=0.8,
         step=0.01,
     )
 
