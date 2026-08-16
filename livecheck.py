@@ -1,5 +1,3 @@
-# livecheck.py
-
 import cv2
 import numpy as np
 from dataclasses import dataclass
