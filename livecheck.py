@@ -500,7 +500,7 @@ def analyze_video(
         blink_ok = True
         mouth_ok = True
 
-    tau_live = 0.60
+    tau_live = 0.80
     base_live = (score >= tau_live)
     decision = "LIVE" if (base_live ) else "SPOOF"
 
